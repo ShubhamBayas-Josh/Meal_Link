@@ -1,0 +1,9 @@
+<h1>User Details</h1>
+
+<p><strong>Name:</strong> <%= @user.name %></p>
+<p><strong>Email:</strong> <%= @user.email %></p>
+<p><strong>Role:</strong> <%= @user.role %></p>
+<p><strong>Address:</strong> <%= @user.address %></p>
+
+<%= link_to 'Edit', edit_user_path(@user), style: 'margin-right: 10px;' %>
+<%= link_to 'Back to All Users', users_path %>
