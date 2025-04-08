@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_21_192223) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_28_072633) do
   create_table "feedbacks", force: :cascade do |t|
     t.integer "rating"
     t.text "comment"
@@ -55,6 +55,14 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_21_192223) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["users_id"], name: "index_notifications_on_users_id"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "age"
+    t.string "email"
   end
 
   create_table "users", force: :cascade do |t|
